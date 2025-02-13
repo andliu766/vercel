@@ -1,0 +1,16 @@
+[package]
+name = "rewriter"
+version = "0.1.0"
+edition = "2021"
+
+[lints]
+workspace = true
+
+[dependencies]
+oxc = { workspace = true }
+smallvec = "1.13.2"
+thiserror = "2.0.6"
+
+[features]
+default = ["debug"]
+debug = []

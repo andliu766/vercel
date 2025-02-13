@@ -1,0 +1,19 @@
+[workspace]
+members = ["native", "rewriter", "wasm"]
+resolver = "2"
+
+[profile.release]
+opt-level = 3
+debug = true
+lto = true
+codegen-units = 1
+panic = "abort"
+
+[workspace.dependencies]
+oxc = "0.47.1"
+
+[workspace.lints.clippy]
+pedantic = { level = "warn", priority = -1 }
+struct-excessive-bools = "allow"
+missing-errors-doc = "allow"
+cast-possible-truncation = "allow"
